@@ -73,4 +73,23 @@ export class MoviesService {
     }
     return response;
   }
+  /**
+   * Search for a movie
+   *
+   * @param query : Search query
+   * @param len : Number of items to be returned from the API.
+   * @returns
+   */
+  async searchMovieGraphQL(query: string, len: number) {
+    const request = this.httpsService.get(
+      `${this.HOST_URL}search/movie?api_key=${this.API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`,
+    );
+    let movie_data = await request.toPromise();
+    movie_data = movie_data.data.results;
+    let response = [];
+    for (let i = 0; i < len; i++) {
+      response.push(movie_data[i]);
+    }
+    return response;
+  }
 }
