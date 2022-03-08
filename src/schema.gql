@@ -1,0 +1,98 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Genre {
+  id: Float!
+  name: String!
+}
+
+type Movies {
+  adult: Boolean!
+  backdrop_path: String!
+  genre_ids: [Float!]!
+  id: Float!
+  original_language: String!
+  original_title: String!
+  overview: String!
+  popularity: Float!
+  poster_path: String!
+  release_date: String!
+  title: String!
+  video: Boolean!
+  vote_average: Float!
+  vote_count: Float!
+}
+
+type MoviesDetail {
+  adult: Boolean!
+  backdrop_path: String!
+  budget: Float!
+  genres: [Genre!]!
+  homepage: String!
+  id: Float!
+  imdb_id: String!
+  original_language: String!
+  original_title: String!
+  overview: String!
+  popularity: Float!
+  poster_path: String!
+  production_companies: [ProductionCompany!]!
+  production_countries: [ProductionCountry!]!
+  release_date: String!
+  revenue: Float!
+  runtime: Float!
+  spoken_languages: [SpokenLanguage!]!
+  status: String!
+  tagline: String!
+  title: String!
+  video: Boolean!
+  videos: Videos!
+  vote_average: Float!
+  vote_count: Float!
+}
+
+type ProductionCompany {
+  id: Float!
+  logo_path: String!
+  name: String!
+  origin_country: String!
+}
+
+type ProductionCountry {
+  iso_3166_1: String!
+  name: String!
+}
+
+type Query {
+  movieDetail(id: String = ""): MoviesDetail!
+  movies(len: Float = 10, query: String = ""): [Movies!]!
+}
+
+type Result {
+  id: String!
+  iso_639_1: String!
+  iso_3166_1: String!
+  key: String!
+  name: String!
+  official: Boolean!
+  published_at: DateTime!
+  site: String!
+  size: Float!
+  type: String!
+}
+
+type SpokenLanguage {
+  english_name: String!
+  iso_639_1: String!
+  name: String!
+}
+
+type Videos {
+  results: [Result!]!
+}
