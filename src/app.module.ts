@@ -15,8 +15,9 @@ import { join } from 'path';
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       include: [MoviesModule],
-      autoSchemaFile: true,
       playground: true,
+      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      sortSchema: true,
     }),
     ConfigModule.forRoot({
       isGlobal: true,
