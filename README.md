@@ -12,39 +12,41 @@ Sample GraphQL query
 
 To Fetch movieDetail
 
-```{
-    movieDetail(id : "414906"){
-        title
-        original_title
-        videos{
-        results {
+```
+{
+  movieDetail(id : "414906"){
+    title
+    original_title
+    videos{
+      results {
         name
         key
-        }
+      }
     }
- }
+  }
 }
 ```
 
 To Discover Movies
 
 ```
-
 {
-movies{
-title
-id
+  movies{
+    title
+    id
+  }
 }
-}
-
 ```
 
 To Search Movies
 
-```{ movies(query :"superman"){
+```
+{
+  movies(len : 2, query :"superman"){
     title
     id
-  }}
+  }
+}
 ```
 
 ## For MySelf
