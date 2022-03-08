@@ -16,7 +16,6 @@ import { join } from 'path';
       driver: ApolloDriver,
       include: [MoviesModule],
       autoSchemaFile: true,
-      typePaths: ['./**/*.graphql'],
       playground: true,
     }),
     ConfigModule.forRoot({
