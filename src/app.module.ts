@@ -1,7 +1,5 @@
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
 import { HttpService } from '@nestjs/axios';
@@ -23,7 +21,7 @@ import { join } from 'path';
       isGlobal: true,
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
