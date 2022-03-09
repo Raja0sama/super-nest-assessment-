@@ -10,6 +10,7 @@ import { join } from 'path';
 @Module({
   imports: [
     MoviesModule,
+
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       include: [MoviesModule],

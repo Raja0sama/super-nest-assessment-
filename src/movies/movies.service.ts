@@ -8,8 +8,8 @@ export class MoviesService {
   private API_KEY = '';
 
   constructor(
-    private httpsService: HttpService,
-    private configService: ConfigService,
+    private readonly httpsService: HttpService,
+    private readonly configService: ConfigService,
   ) {
     this.API_KEY = this.configService.get<string>('API_KEY');
   }

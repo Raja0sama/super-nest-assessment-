@@ -3,7 +3,7 @@
 Link to Deployed Version of the App:
 
 The Basic Host is
-`https://super-nset.herokuapp.com/movies/`
+`https://super-nset.herokuapp.com/`
 
 GraphQL
 `https://super-nset.herokuapp.com/movies/`
