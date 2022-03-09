@@ -28,6 +28,8 @@ The Requirement was to either use graphQL or Rest Api, I had plenty time so i de
 
 HTTPS Service library that is being used is Axios, as you cna see in app.module.ts.
 
+Minimal Jest tests are also being written for the application
+
 Beside that i think the code is self explanatory.
 
 Below are GraphQL queries
